@@ -1,0 +1,6 @@
+G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\bin\Debug\HmChatGptWeb.dll
+G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\bin\Debug\HmChatGptWeb.pdb
+G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\obj\Debug\HmChatGptWeb.csproj.AssemblyReference.cache
+G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\obj\Debug\HmChatGptWeb.csproj.CoreCompileInputs.cache
+G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\obj\Debug\HmChatGptWeb.dll
+G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\obj\Debug\HmChatGptWeb.pdb

@@ -41,13 +41,15 @@ public class HmChatGptWeb
             SendReturn();
             // Enter を送信
             await Task.Delay(300);
+            /*
             SendReturn();
             await Task.Delay(300);
+            */
         });
     }
 
 
-    private static async void SendTab()
+    private static async void SendShiftTab()
     {
         // Tab キーを押下
         keybd_event(VK_TAB, 0, KEYEVENTF_KEYDOWN, 0);

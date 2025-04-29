@@ -131,7 +131,7 @@ function openRenderPaneCommand(text) {
             url: baseUrl,
             target: "_each",
             initialize: "async",
-            show: 1
+            show: 1,
         };
         
         const browserPaneMixParam = { ...renderPaneOriginalParam, ...renderPaneCustomParam };
@@ -149,7 +149,9 @@ function waitBrowserPane() {
     });
     
     if (status == "complete") {
-        onCompleteBrowserPane();
+        const eachBrowserPane = 6;
+        setfocus(eachBrowserPane);
+        timeHandleOfDoMain = hidemaru.setTimeout(onCompleteBrowserPane, 300);
     }
     
     else {
@@ -159,14 +161,13 @@ function waitBrowserPane() {
 
 function onCompleteBrowserPane() {
     try {
-        escapeselect();
         const eachBrowserPane = 6;
         setfocus(eachBrowserPane);
         browserpanecommand({
             target: "_each",
             "focusinputfield" : 1,
-            // "maximize": 1,
-            "size": 1050,
+            "maximize": 1,
+            // "size": 1050,
         });
         const com = createobject(currentMacroDirectory + "\\HmChatGptWeb.dll", "HmChatGptWeb.HmChatGptWeb");
         com.PasteToBrowserPane();
@@ -178,7 +179,13 @@ function onCompleteBrowserPane() {
 
 var orgFocus = getfocus();
 function onBeginAIAnswer() {
-    const browserPaneMixParam = { ...{target: "_each", /*restoremaximize:1*/}, ...renderPaneCustomParam };
+    browserpanecommand({
+        target: "_each",
+        restoremaximize:1,
+        invisible: 0
+    });
+    
+    const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
     browserpanecommand(browserPaneMixParam);
     setfocus(orgFocus);
 }
