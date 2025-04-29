@@ -33,6 +33,7 @@ public partial class HmChatGptWeb
 
     public void PasteToBrowserPane(String text)
     {
+        CaptureClipboard();
         // クリップボードにテキストを保存
         Clipboard.SetText(text);
 
