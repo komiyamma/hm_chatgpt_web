@@ -25,8 +25,9 @@ const isOneAtTimeAIRenderPane = 1; // AI関連のレンダリング枠は(他の
 
 const renderPaneTargetName = "HmChatGptWeb";
 
-    
 const currentMacroDirectory = currentmacrodirectory();
+
+const com = createobject(currentMacroDirectory + "\\HmChatGptWeb.dll", "HmChatGptWeb.HmChatGptWeb");
 
 // 前回分が実行されずに溜まっていたら除去
 var timeHandleOfWindowCloseCheck;
@@ -149,8 +150,7 @@ function waitBrowserPane() {
     });
     
     if (status == "complete") {
-        const eachBrowserPane = 6;
-        setfocus(eachBrowserPane);
+        setFocusToBrowserPane();
         timeHandleOfDoMain = hidemaru.setTimeout(onCompleteBrowserPane, 300);
     }
     
@@ -161,20 +161,23 @@ function waitBrowserPane() {
 
 function onCompleteBrowserPane() {
     try {
-        const eachBrowserPane = 6;
-        setfocus(eachBrowserPane);
+        setFocusToBrowserPane();
         browserpanecommand({
             target: "_each",
             "focusinputfield" : 1,
             "maximize": 1,
             // "size": 1050,
         });
-        const com = createobject(currentMacroDirectory + "\\HmChatGptWeb.dll", "HmChatGptWeb.HmChatGptWeb");
         com.PasteToBrowserPane();
     } catch(e) {
     } finally {
         timeHandleOfDoMain = hidemaru.setTimeout(onBeginAIAnswer, 2000);
     }
+}
+
+function setFocusToBrowserPane() {
+    const eachBrowserPane = 6;
+    setfocus(eachBrowserPane);
 }
 
 var orgFocus = getfocus();
@@ -188,9 +191,20 @@ function onBeginAIAnswer() {
     const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
     browserpanecommand(browserPaneMixParam);
     setfocus(orgFocus);
+    restoreClipBoard();
 }
 
+function saveClipBoard() {
+    try {
+        com.CaptureClipboard();
+    } catch(e) {}
+}
 
+function restoreClipBoard() {
+    try {
+        com.RestoreClipboard();
+    } catch(e) {}
+}
 
 function getQuestionText() {
 
@@ -216,7 +230,7 @@ function doMain() {
     if (!text) {
         return;
     }
-
+    saveClipBoard();
     setclipboard( text );
 
     timeHandleOfDoMain = hidemaru.setTimeout(doAsyncAction, 0, text);

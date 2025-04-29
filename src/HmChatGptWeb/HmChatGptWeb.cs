@@ -9,7 +9,7 @@ namespace HmChatGptWeb;
 [ComVisible(true)]
 [ClassInterface(ClassInterfaceType.AutoDual)]
 [Guid("EEF21C40-AE19-4107-8FBF-399CCD7A5E3B")]
-public class HmChatGptWeb
+public partial class HmChatGptWeb
 {
     // キーボード入力をシミュレートするためのAPI
     [DllImport("user32.dll")]
@@ -22,6 +22,8 @@ public class HmChatGptWeb
 
     // Virtual-Key Codes
     private const byte VK_CONTROL = 0x11;
+    private const byte VK_SHIFT = 0x10;
+    private const byte VK_ALT = 0x12;
     private const byte VK_C = 0x43;
     private const byte VK_V = 0x56;
     private const byte VK_RETURN = 0x0D;
@@ -75,6 +77,13 @@ public class HmChatGptWeb
 
     private static async void SendReturn()
     {
+        // Ctrl キーを解放
+        keybd_event(VK_CONTROL, 0, KEYEVENTF_KEYUP, 0);
+        // Shift キーを解放
+        keybd_event(VK_SHIFT, 0, KEYEVENTF_KEYUP, 0);
+        // Alt キーを解放
+        keybd_event(VK_ALT, 0, KEYEVENTF_KEYUP, 0);
+
         // Enter キーを押下
         keybd_event(VK_RETURN, 0, KEYEVENTF_KEYDOWN, 0);
 
