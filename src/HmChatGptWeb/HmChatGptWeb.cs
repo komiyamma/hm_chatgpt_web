@@ -48,10 +48,6 @@ public partial class HmChatGptWeb
             SendReturn();
             // Enter を送信
             await Task.Delay(300);
-            /*
-            SendReturn();
-            await Task.Delay(300);
-            */
         });
     }
 
