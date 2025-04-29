@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace HmChatGptWeb;
@@ -46,8 +49,6 @@ public partial class HmChatGptWeb
 
             // Enter を送信
             SendReturn();
-            // Enter を送信
-            await Task.Delay(300);
         });
     }
 

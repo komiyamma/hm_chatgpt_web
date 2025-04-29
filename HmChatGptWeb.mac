@@ -27,36 +27,10 @@ const renderPaneTargetName = "HmChatGptWeb";
 
 const currentMacroDirectory = currentmacrodirectory();
 
-const com = createobject(currentMacroDirectory + "\\HmChatGptWeb.dll", "HmChatGptWeb.HmChatGptWeb");
+const com = createobject(`${currentMacroDirectory}\\${renderPaneTargetName}.dll`, `${renderPaneTargetName}.${renderPaneTargetName}`);
 
 const script = hidemaru.loadTextFile(currentMacroDirectory + "\\HmConvAIWeb.js");
 eval(script);
-
-// ブラウザウィンドウオープン
-function openRenderPaneCommand(text) {
-
-    // 個別ブラウザ枠が、このGeminiだと思われるならば、
-    let url = browserpanecommand({
-        "target": "_each",
-        "get": "url",
-    });
-
-    // 開かれていない時だけ...
-    if (!url.includes(baseUrl)) {
-        let renderPaneOriginalParam = {
-            url: baseUrl,
-            target: "_each",
-            initialize: "async",
-            show: 1,
-        };
-        
-        const browserPaneMixParam = { ...renderPaneOriginalParam, ...renderPaneCustomParam };
-        
-        browserpanecommand(browserPaneMixParam);
-    }
-    
-    hidemaru.setTimeout(waitBrowserPane, 0, text);
-}
 
 function onCompleteBrowserPaneDecorator(text) {
     browserpanecommand({
@@ -68,8 +42,6 @@ function onCompleteBrowserPaneDecorator(text) {
 function onEndMacroDecorator() {
     const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
     browserpanecommand(browserPaneMixParam);
-    setfocus(orgFocus);
-    restoreClipBoard();
 }
 
 
