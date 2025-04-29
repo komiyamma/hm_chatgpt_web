@@ -12,6 +12,8 @@ jsmode  @"WebView2\HmChatGptWeb";
 
 js {
 
+// ------------- 会話エンジンの設定項目 -------------
+
 const baseUrl = "https://chatgpt.com/";
 
 const renderPaneCustomParam = {
@@ -26,8 +28,6 @@ const isOneAtTimeAIRenderPane = 1; // AI関連のレンダリング枠は(他の
 const renderPaneTargetName = "HmChatGptWeb";
 
 const currentMacroDirectory = currentmacrodirectory();
-
-const com = createobject(`${currentMacroDirectory}\\${renderPaneTargetName}.dll`, `${renderPaneTargetName}.${renderPaneTargetName}`);
 
 const script = hidemaru.loadTextFile(currentMacroDirectory + "\\HmConvAIWeb.js");
 eval(script);
