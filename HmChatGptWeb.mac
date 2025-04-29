@@ -140,10 +140,10 @@ function openRenderPaneCommand(text) {
         browserpanecommand(browserPaneMixParam);
     }
     
-    hidemaru.setTimeout(waitBrowserPane, 0);
+    hidemaru.setTimeout(waitBrowserPane, 0, text);
 }
 
-function waitBrowserPane() {
+function waitBrowserPane(text) {
     const status = browserpanecommand({
         target: "_each",
         get: "readyState"
@@ -151,15 +151,15 @@ function waitBrowserPane() {
     
     if (status == "complete") {
         setFocusToBrowserPane();
-        timeHandleOfDoMain = hidemaru.setTimeout(onCompleteBrowserPane, 300);
+        timeHandleOfDoMain = hidemaru.setTimeout(onCompleteBrowserPane, 300, text);
     }
     
     else {
-        timeHandleOfDoMain = hidemaru.setTimeout(waitBrowserPane, 300);
+        timeHandleOfDoMain = hidemaru.setTimeout(waitBrowserPane, 300, text);
     }
 }
 
-function onCompleteBrowserPane() {
+function onCompleteBrowserPane(text) {
     try {
         setFocusToBrowserPane();
         browserpanecommand({
@@ -168,7 +168,7 @@ function onCompleteBrowserPane() {
             "maximize": 1,
             // "size": 1050,
         });
-        com.PasteToBrowserPane();
+        com.PasteToBrowserPane(text);
     } catch(e) {
     } finally {
         timeHandleOfDoMain = hidemaru.setTimeout(onBeginAIAnswer, 2000);
@@ -194,7 +194,7 @@ function onBeginAIAnswer() {
     restoreClipBoard();
 }
 
-function saveClipBoard() {
+function captureClipBoard() {
     try {
         com.CaptureClipboard();
     } catch(e) {}
@@ -204,8 +204,10 @@ function restoreClipBoard() {
     try {
         // Windows 10 の 1809 以降にはクリップボード履歴がある
         var processInfo = hidemaru.runProcess(currentMacroDirectory + "\\ClipboardHistoryManager.exe", ".", "stdio", "sjis" );
-
-        com.RestoreClipboard();
+        processInfo.onClose = function() {
+            // 普通のクリップボードの復元
+            com.RestoreClipboard();
+        }
     } catch(e) {}
 }
 
@@ -233,8 +235,7 @@ function doMain() {
     if (!text) {
         return;
     }
-    saveClipBoard();
-    setclipboard( text );
+    captureClipBoard();
 
     timeHandleOfDoMain = hidemaru.setTimeout(doAsyncAction, 0, text);
 }

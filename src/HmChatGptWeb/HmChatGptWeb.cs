@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace HmChatGptWeb;
 
@@ -30,8 +31,11 @@ public partial class HmChatGptWeb
     private const byte VK_TAB = 0x09; // タブキーの仮想キーコード
 
 
-    public void PasteToBrowserPane()
+    public void PasteToBrowserPane(String text)
     {
+        // クリップボードにテキストを保存
+        Clipboard.SetText(text);
+
         // 以下を非同期実行にする
         Task.Run(async () =>
         {
