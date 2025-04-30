@@ -6,7 +6,7 @@
  */
 
 
-hidemaruversion "9.35.99";
+hidemaruversion "9.39.99";
 
 jsmode  @"WebView2\HmChatGptWeb";
 
