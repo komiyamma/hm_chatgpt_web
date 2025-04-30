@@ -237,8 +237,6 @@ function setFocusToBrowserPane() {
 
 var orgFocus = getfocus();
 async function onEndQuestionToAI() {
-    debuginfo(2);
-    console.log("onEndQuestionToAI");
     setfocus(orgFocus);
 
     // 再実行してもここまで来てたらこれはやめないよっと。
