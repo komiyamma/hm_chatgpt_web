@@ -18,7 +18,8 @@ const baseUrl = "https://chatgpt.com/";
 
 const renderPaneCustomParam = {
     place: "rightside",            // leftside | rightside | upside | downside
-    size: 450,                     // 左や右の配置の時は、横幅のこと。上や下の配置の時は縦幅のこと。
+    size: 900,                     // 左や右の配置の時は、横幅のこと。上や下の配置の時は縦幅のこと。
+                                   // ChatGptのサイトに限っては、900以上の幅があることが必要。450なども指定した場合でも一瞬は幅が広くなる。
 };
 
 const isOneAtTimeAIRenderPane = 1; // AI関連のレンダリング枠は(他の種類のAIも含め)１つだけにする。(複数起動しそうになると、前のものが閉じる）
@@ -58,11 +59,10 @@ function onPrevKeySendDecorator() {
 }
 
 function onEndMacroDecorator() {
-    /*
-    const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
-    browserpanecommand(browserPaneMixParam);
-    
-    */
+    timeHandleOfDoMain = hidemaru.setTimeout( () => {
+        const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
+        browserpanecommand(browserPaneMixParam);
+    }, 500);
 }
 
 
