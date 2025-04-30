@@ -18,7 +18,7 @@ const baseUrl = "https://chatgpt.com/";
 
 const renderPaneCustomParam = {
     place: "rightside",            // leftside | rightside | upside | downside
-    size: 450,                     // 左や右の配置の時は、横幅のこと。上や下の配置の時は縦幅のこと。
+    size: 900,                     // 左や右の配置の時は、横幅のこと。上や下の配置の時は縦幅のこと。
 };
 
 const isOneAtTimeAIRenderPane = 1; // AI関連のレンダリング枠は(他の種類のAIも含め)１つだけにする。(複数起動しそうになると、前のものが閉じる）
@@ -33,15 +33,24 @@ const script = hidemaru.loadTextFile(currentMacroDirectory + "\\HmConvAIWeb.js")
 eval(script);
 
 function onCompleteBrowserPaneDecorator(text) {
+    /*
     browserpanecommand({
         target: "_each",
         "size": 1000,
     });
+    */
+}
+
+// 一般とは異なり、キー送信前に一度Returnを送信しておかないと、ChatGpt上の文字列を選択している時などにうまくいかない。
+function onPrevKeySendDecorator() {
+    sendReturn();
 }
 
 function onEndMacroDecorator() {
+    /*
     const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
     browserpanecommand(browserPaneMixParam);
+    */
 }
 
 
