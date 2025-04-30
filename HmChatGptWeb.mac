@@ -18,7 +18,7 @@ const baseUrl = "https://chatgpt.com/";
 
 const renderPaneCustomParam = {
     place: "rightside",            // leftside | rightside | upside | downside
-    size: 900,                     // 左や右の配置の時は、横幅のこと。上や下の配置の時は縦幅のこと。
+    size: 450,                     // 左や右の配置の時は、横幅のこと。上や下の配置の時は縦幅のこと。
 };
 
 const isOneAtTimeAIRenderPane = 1; // AI関連のレンダリング枠は(他の種類のAIも含め)１つだけにする。(複数起動しそうになると、前のものが閉じる）
@@ -32,13 +32,24 @@ const currentMacroDirectory = currentmacrodirectory();
 const script = hidemaru.loadTextFile(currentMacroDirectory + "\\HmConvAIWeb.js");
 eval(script);
 
-function onCompleteBrowserPaneDecorator(text) {
-    /*
-    browserpanecommand({
-        target: "_each",
-        "size": 1000,
-    });
-    */
+function returnMinimumWindowSize() {
+    if (renderPaneCustomParam.size < 900) {
+        return {target:"_each", size:900};
+    } else {
+        return {};
+    }
+}
+
+// 最低サイズがある程度ないと、ChatGPTは「リターンキー」では送信できない。
+function firstParamDecorator(baseUrl, text) {
+    return returnMinimumWindowSize();
+}
+
+// ２回目以降に、ChatGPTの返答等を選択した状態で質問した時の挙動が不安感があるので、リフレッシュもしておく。
+// 最低サイズがある程度ないと、ChatGPTは「リターンキー」では送信できない。
+function secondParamDecorator(baseUrl, text) {
+    browserpanecommand({target:"_each", "refresh":1});
+    return returnMinimumWindowSize();
 }
 
 // 一般とは異なり、キー送信前に一度Returnを送信しておかないと、ChatGpt上の文字列を選択している時などにうまくいかない。
@@ -50,6 +61,7 @@ function onEndMacroDecorator() {
     /*
     const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
     browserpanecommand(browserPaneMixParam);
+    
     */
 }
 
