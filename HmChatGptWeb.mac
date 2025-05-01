@@ -53,11 +53,6 @@ function secondParamDecorator(baseUrl, text) {
     return returnMinimumWindowSize();
 }
 
-// 一般とは異なり、キー送信前に一度Returnを送信しておかないと、ChatGpt上の文字列を選択している時などにうまくいかない。
-function onPrevKeySendDecorator() {
-    sendReturn();
-}
-
 function onEndMacroDecorator() {
     timeHandleOfDoMain = hidemaru.setTimeout( () => {
         const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
