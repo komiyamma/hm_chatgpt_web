@@ -1,5 +1,5 @@
 ﻿/*
- * HmChatGptWeb v 1.0.0.4
+ * HmChatGptWeb v 1.0.0.5
  *
  * Copyright (c) 2025 Akitsugu Komiyama
  * under the MIT License
@@ -35,7 +35,7 @@ eval(script);
 
 function returnMinimumWindowSize() {
     if (renderPaneCustomParam.size < 900) {
-        return {target:"_each", size:900};
+        return {size:900};
     } else {
         return {};
     }
@@ -62,6 +62,5 @@ function onEndMacroDecorator() {
 
 
 doMain();
-
 
 }
