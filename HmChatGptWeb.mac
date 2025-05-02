@@ -36,9 +36,9 @@ eval(script);
 function returnMinimumWindowSize() {
     if (renderPaneCustomParam.size < 900) {
         return {size:900};
-    } else {
-        return {};
     }
+    
+    return {};
 }
 
 // 最低サイズがある程度ないと、ChatGPTは「リターンキー」では送信できない。
