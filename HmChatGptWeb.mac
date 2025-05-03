@@ -46,10 +46,8 @@ function firstParamDecorator(baseUrl, text) {
     return returnMinimumWindowSize();
 }
 
-// ２回目以降に、ChatGPTの返答等を選択した状態で質問した時の挙動が不安感があるので、リフレッシュもしておく。
 // 最低サイズがある程度ないと、ChatGPTは「リターンキー」では送信できない。
 function secondParamDecorator(baseUrl, text) {
-    // browserpanecommand({target:"_each", "refresh":1});
     return returnMinimumWindowSize();
 }
 
