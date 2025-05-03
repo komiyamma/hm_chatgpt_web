@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "G:\\repogitory\\hm_chatgpt_web\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|G:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|g:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|solutionrelative:hmchatgptweb\\additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -16,9 +16,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|HmChatGptWeb||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|g:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +39,7 @@
               "RelativeDocumentMoniker": "HmChatGptWeb\\Additional.cs",
               "ToolTip": "G:\\repogitory\\hm_chatgpt_web\\src\\HmChatGptWeb\\Additional.cs",
               "RelativeToolTip": "HmChatGptWeb\\Additional.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAEwAwAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T15:23:20.424Z",
               "EditorCaption": ""
@@ -56,8 +53,7 @@
               "ToolTip": "G:\\repogitory\\hm_chatgpt_web\\src\\HmChatGptWeb\\HmChatGptWeb.csproj",
               "RelativeToolTip": "HmChatGptWeb\\HmChatGptWeb.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-29T10:17:58.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T10:17:58.685Z"
             },
             {
               "$type": "Document",
@@ -69,8 +65,7 @@
               "RelativeToolTip": "HmChatGptWeb\\ClipBoard.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T10:11:28.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T10:11:28.278Z"
             },
             {
               "$type": "Document",
@@ -82,8 +77,7 @@
               "RelativeToolTip": "HmChatGptWeb\\HmChatGptWeb.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAUwFsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T05:31:01.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T05:31:01.286Z"
             }
           ]
         }
