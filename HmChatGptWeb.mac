@@ -1,5 +1,5 @@
 ﻿/*
- * HmChatGptWeb v 1.0.0.6
+ * HmChatGptWeb v 1.0.0.7
  *
  * Copyright (c) 2025 Akitsugu Komiyama
  * under the MIT License
@@ -49,8 +49,15 @@ function firstParamDecorator(baseUrl, text) {
 // ２回目以降に、ChatGPTの返答等を選択した状態で質問した時の挙動が不安感があるので、リフレッシュもしておく。
 // 最低サイズがある程度ないと、ChatGPTは「リターンキー」では送信できない。
 function secondParamDecorator(baseUrl, text) {
-    browserpanecommand({target:"_each", "refresh":1});
+    // browserpanecommand({target:"_each", "refresh":1});
     return returnMinimumWindowSize();
+}
+
+function onPrevKeySendDecorator() {
+    try {
+        com.SendShiftEscSync();
+    } catch(e) {
+    }
 }
 
 doMain();

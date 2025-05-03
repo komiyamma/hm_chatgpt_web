@@ -5,8 +5,6 @@ C:\Users\master\source\repos\HmChatGptWeb\HmChatGptWeb\bin\Release\HmChatGptWeb.
 C:\Users\master\source\repos\HmChatGptWeb\HmChatGptWeb\obj\Release\HmChatGptWeb.dll
 C:\Users\master\source\repos\HmChatGptWeb\HmChatGptWeb\obj\Release\HmChatGptWeb.pdb
 G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\bin\Release\HmChatGptWeb.dll
-G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\bin\Release\HmChatGptWeb.pdb
 G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\obj\Release\HmChatGptWeb.csproj.AssemblyReference.cache
 G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\obj\Release\HmChatGptWeb.csproj.CoreCompileInputs.cache
 G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\obj\Release\HmChatGptWeb.dll
-G:\repogitory\hm_chatgpt_web\src\HmChatGptWeb\obj\Release\HmChatGptWeb.pdb

@@ -2,7 +2,7 @@
 /// <reference path="../types/hm_jsmode.d.ts" />
 
 
-// HmConvAIWeb.js 共通ライブラリ。 v 1.0.0.6
+// HmConvAIWeb.js 共通ライブラリ。 v 1.0.0.7
 // 全「Hm*****Web」シリーズで共通。
 
 // このdllのソースも全「Hm****Web」シリーズで共通であるが、ファイル名とGUIDだけ違う。
@@ -194,7 +194,7 @@ function sendCtrlV() {
 
 function sendReturn() {
     try {
-        com.SendReturnVSync();
+        com.SendReturnSync();
     } catch (e) { }
 }
 

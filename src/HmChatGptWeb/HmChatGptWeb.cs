@@ -34,6 +34,8 @@ public partial class HmChatGptWeb
     private const byte VK_TAB = 0x09; // タブキーの仮想キーコード
 
 
+
+
     public void CaptureForBrowserPane(String text)
     {
         try
@@ -64,7 +66,7 @@ public partial class HmChatGptWeb
         SendCtrlV();
     }
 
-    public void SendReturnVSync()
+    public void SendReturnSync()
     {
         SendReturn();
     }
