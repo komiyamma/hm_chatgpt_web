@@ -1,5 +1,5 @@
 ﻿/*
- * HmChatGptWeb v 1.0.0.5
+ * HmChatGptWeb v 1.0.0.6
  *
  * Copyright (c) 2025 Akitsugu Komiyama
  * under the MIT License
@@ -52,14 +52,6 @@ function secondParamDecorator(baseUrl, text) {
     browserpanecommand({target:"_each", "refresh":1});
     return returnMinimumWindowSize();
 }
-
-function onEndMacroDecorator() {
-    timeHandleOfDoMain = hidemaru.setTimeout( () => {
-        const browserPaneMixParam = { ...{"target": "_each"}, ...renderPaneCustomParam };
-        browserpanecommand(browserPaneMixParam);
-    }, 500);
-}
-
 
 doMain();
 
