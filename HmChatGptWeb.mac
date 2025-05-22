@@ -56,7 +56,7 @@ function firstParamDecorator(baseUrl, text) {
         const params = new URLSearchParams({ q: text });
         absoluteUrl.search = params.toString();
         
-        return {url: absoluteUrl.href};
+        return { ...{url: absoluteUrl.href}, ...returnMinimumWindowSize() };
     }
     isFirstParamOnlyWindow = false;
     return returnMinimumWindowSize();
