@@ -1,5 +1,5 @@
 ﻿/*
- * HmChatGptWeb v 1.1.1.4
+ * HmChatGptWeb v 1.1.1.5
  *
  * Copyright (c) 2025 Akitsugu Komiyama
  * under the MIT License
@@ -43,22 +43,33 @@ function returnMinimumWindowSize() {
     return {};
 }
 
+let isFirstParamOnlyWindow = true;
+
 // 初回の時の特別なパラメータ
 function firstParamDecorator(baseUrl, text) {
-    // スペースしかなければ、空文字
-    text = text.trim() === "" ? "" : text;
-    
-    // URLの構築
-    const absoluteUrl = new URL(baseUrl);
-    const params = new URLSearchParams({ q: text });
-    absoluteUrl.search = params.toString();
-    
-    return { ...{url: absoluteUrl.href}, ...{size: returnMinimumWindowSize()} };
+    if (text.length < 512) {
+        // スペースしかなければ、空文字
+        text = text.trim() === "" ? "" : text;
+        
+        // URLの構築
+        const absoluteUrl = new URL(baseUrl);
+        const params = new URLSearchParams({ q: text });
+        absoluteUrl.search = params.toString();
+        
+        return {url: absoluteUrl.href};
+    }
+    isFirstParamOnlyWindow = false;
+    return returnMinimumWindowSize();
 }
 
-// 最初のAI会話においては、キー送信処理などは不要。(ChatGptは１発目の質問だけはURL処理できるため)
+// 最初のAI会話においては、キー送信処理などは不要。(１発目の質問だけはURL処理できるため)
 function firstQuestionOnlyOpenWindow() {
-    return true;
+    if (isFirstParamOnlyWindow) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 // 最低サイズがある程度ないと、ChatGPTは「リターンキー」では送信できない。
