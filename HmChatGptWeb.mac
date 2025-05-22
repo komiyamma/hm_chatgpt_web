@@ -56,7 +56,7 @@ function firstParamDecorator(baseUrl, text) {
     return { ...{url: absoluteUrl.href}, ...{size: returnMinimumWindowSize()} };
 }
 
-// 最初のAI会話においては、キー送信処理などは不要。(Grokは１発目の質問だけはURL処理できるため)
+// 最初のAI会話においては、キー送信処理などは不要。(ChatGptは１発目の質問だけはURL処理できるため)
 function firstQuestionOnlyOpenWindow() {
     return true;
 }
