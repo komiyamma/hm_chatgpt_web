@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "G:\\repogitory\\hm_chatgpt_web\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|G:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\clipboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|solutionrelative:hmchatgptweb\\clipboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|g:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|solutionrelative:hmchatgptweb\\additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|G:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\hmchatgptweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|solutionrelative:hmchatgptweb\\hmchatgptweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|G:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\clipboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|solutionrelative:hmchatgptweb\\clipboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|HmChatGptWeb||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
@@ -25,7 +25,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,13 +33,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Additional.cs",
               "DocumentMoniker": "G:\\repogitory\\hm_chatgpt_web\\src\\HmChatGptWeb\\Additional.cs",
               "RelativeDocumentMoniker": "HmChatGptWeb\\Additional.cs",
               "ToolTip": "G:\\repogitory\\hm_chatgpt_web\\src\\HmChatGptWeb\\Additional.cs",
               "RelativeToolTip": "HmChatGptWeb\\Additional.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA1wCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T15:23:20.424Z",
               "EditorCaption": ""
@@ -57,19 +57,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ClipBoard.cs",
               "DocumentMoniker": "G:\\repogitory\\hm_chatgpt_web\\src\\HmChatGptWeb\\ClipBoard.cs",
               "RelativeDocumentMoniker": "HmChatGptWeb\\ClipBoard.cs",
               "ToolTip": "G:\\repogitory\\hm_chatgpt_web\\src\\HmChatGptWeb\\ClipBoard.cs",
               "RelativeToolTip": "HmChatGptWeb\\ClipBoard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAkwGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T10:11:28.278Z"
+              "WhenOpened": "2025-04-29T10:11:28.278Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "HmChatGptWeb.cs",
               "DocumentMoniker": "G:\\repogitory\\hm_chatgpt_web\\src\\HmChatGptWeb\\HmChatGptWeb.cs",
               "RelativeDocumentMoniker": "HmChatGptWeb\\HmChatGptWeb.cs",
