@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "G:\\repogitory\\hm_chatgpt_web\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|G:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\clipboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|g:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\clipboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|solutionrelative:hmchatgptweb\\clipboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|g:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|G:\\repogitory\\hm_chatgpt_web\\src\\hmchatgptweb\\additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5848A17-3F57-4F50-9A81-BAAE2DBECA52}|HmChatGptWeb\\HmChatGptWeb.csproj|solutionrelative:hmchatgptweb\\additional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -41,8 +41,7 @@
               "RelativeToolTip": "HmChatGptWeb\\Additional.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA1wCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T15:23:20.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T15:23:20.424Z"
             },
             {
               "$type": "Document",
@@ -63,7 +62,7 @@
               "RelativeDocumentMoniker": "HmChatGptWeb\\ClipBoard.cs",
               "ToolTip": "G:\\repogitory\\hm_chatgpt_web\\src\\HmChatGptWeb\\ClipBoard.cs",
               "RelativeToolTip": "HmChatGptWeb\\ClipBoard.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAkwGIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T10:11:28.278Z",
               "EditorCaption": ""

@@ -17,10 +17,7 @@ public partial class HmChatGptWeb
 {
     public void SendToClipboard(string text)
     {
-        var thread = new Thread(() => Clipboard.SetText(text));
-        thread.SetApartmentState(ApartmentState.STA);
-        thread.Start();
-        thread.Join();
+        Clipboard.SetText(text);
     }
 
     private Dictionary<string, object> storedData = new Dictionary<string, object>();
@@ -28,10 +25,8 @@ public partial class HmChatGptWeb
     // クリップボードの内容を記憶
     public void CaptureClipboard()
     {
-
-        var thread = new Thread(() =>
+        try
         {
-
             storedData.Clear();
 
             IDataObject dataObject = Clipboard.GetDataObject();
@@ -70,20 +65,18 @@ public partial class HmChatGptWeb
                     // 一部の形式は例外が出るためスキップ
                 }
             }
-        });
 
-        thread.SetApartmentState(ApartmentState.STA);
-        thread.Start();
-        thread.Join();
-
+        }
+        catch (Exception ex)
+        {
+            // クリップボードの取得に失敗した場合は何もしない
+        }
     }
 
     // 保存しておいたデータをクリップボードに戻す
     public void RestoreClipboard()
     {
-        var thread = new Thread(() =>
-        {
-
+        try { 
             DataObject newData = new DataObject();
 
             foreach (var kvp in storedData)
@@ -92,9 +85,10 @@ public partial class HmChatGptWeb
             }
 
             Clipboard.SetDataObject(newData, true);
-        });
-        thread.SetApartmentState(ApartmentState.STA);
-        thread.Start();
-        thread.Join();
+        }
+        catch (Exception ex)
+        {
+            // クリップボードの復元に失敗した場合は何もしない
+        }
     }
 }
