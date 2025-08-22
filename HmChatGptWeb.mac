@@ -79,6 +79,10 @@ function secondParamDecorator(baseUrl, text) {
 
 function onPrevKeySendDecorator() {
     try {
+        browserpanecommand({target:"_each", focusinputfield:'#prompt-textarea'});
+    } catch(e) {
+    }
+    try {
         com.SendShiftEscSync();
     } catch(e) {
     }
