@@ -1,5 +1,5 @@
 ﻿/*
- * HmChatGptWeb v 1.1.1.5
+ * HmChatGptWeb v 1.1.1.9
  *
  * Copyright (c) 2025 Akitsugu Komiyama
  * under the MIT License
@@ -77,14 +77,24 @@ function secondParamDecorator(baseUrl, text) {
     return returnMinimumWindowSize();
 }
 
-function onPrevKeySendDecorator() {
-    try {
-        browserpanecommand({target:"_each", focusinputfield:'#prompt-textarea'});
-    } catch(e) {
+if (isVersionAtLeast(hidemaruversion(), "9.50.04")) {
+    function onPrevKeySendDecorator() {
+        try {
+            browserpanecommand({target:"_each", focusinputfield:'#prompt-textarea'});
+        } catch(e) {
+        }
+        try {
+            com.SendShiftEscSync();
+        } catch(e) {
+        }
     }
-    try {
-        com.SendShiftEscSync();
-    } catch(e) {
+    
+} else {
+    function onPrevKeySendDecorator() {
+        try {
+            com.SendShiftEscSync();
+        } catch(e) {
+        }
     }
 }
 
